@@ -74,8 +74,9 @@ export default function Register(){
             return;
         }
         if(data.password){
-            router.push("/login");
+            return router.push("/login");
         }
+        setErr({type:"bio-name", msg:"Something went wrong: Report to ADMIN!"});
         setIsLoading(false);
     }
 

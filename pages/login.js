@@ -44,10 +44,14 @@ export default function Login(){
                 setIsLoading(false);
                 setErr(data.error)
             }
-            else{
+            else if(data.refToken){
                 localStorage.setItem("refToken", data.refToken);
                 login(data.refToken);
                 router.push("/user/expenses");
+            }
+            else{
+                setIsLoading(false);
+                setErr("Something went Wrong: Report to ADMIN!");
             }
         }
         catch(e){
