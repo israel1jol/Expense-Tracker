@@ -6,7 +6,7 @@ export default async function(req, res){
     const tok = await Token.findOne({hash:refToken});
     if(tok){
         const payload = jwt.verify(tok.hash, process.env.REFRESH_KEY);
-        const token = jwt.sign(payload, process.env.ACCESS_KEY, {expiresIn:900});
+        const token = jwt.sign(payload, process.env.ACCESS_KEY, {expiresIn:86400});
         return res.json({"accToken":token});
     }
     else{
