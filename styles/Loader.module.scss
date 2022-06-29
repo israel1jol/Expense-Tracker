@@ -1,0 +1,50 @@
+@import "variables";
+
+.ack{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.boat{
+    width: 5%;
+    aspect-ratio: 1/1;
+    border: 2px solid $primary-color;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.boat::after{
+    content: "";
+    width: 95%;
+    border: 2px solid $primary-color;
+    z-index: 10000;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color:darken($primary-color, 30%);
+}
+
+.boat::before{
+    content: "";
+    width: 90%;
+    height: 200%;
+    position: absolute;
+    border-radius: 40%;
+    animation-name: rotate;
+    animation-timing-function: ease;
+    animation-direction: reverse;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    background: conic-gradient(rgb(255, 255, 255) 30%, transparent 2%, transparent 20%);
+}
+
+@keyframes rotate {
+    0%{transform: rotateZ(0);}
+    100%{transform: rotateZ(360deg);}
+}

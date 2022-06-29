@@ -1,0 +1,49 @@
+@import "variables";
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.formSpace{
+    width: 100%;
+}
+
+.formSpace::-webkit-scrollbar{
+    background-color: rgb(33, 5, 60);
+    width: 6px;
+    border-radius: 20px;
+}
+
+.formSpace::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: rgb(209, 209, 209);
+    transition: 0.3s ease;
+
+    &:hover{
+        transform: scaleX(2);
+        background-color: rgb(240, 223, 255);
+    }
+}
+
+.outterRim{
+    opacity: 0.7;
+    min-height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .formGrouping{
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.742);
+        padding: 20px 70px;
+    }
+
+    label{
+        color:$text-color-alpha;
+        font-size: 20px;
+    }
+}

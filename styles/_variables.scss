@@ -1,0 +1,37 @@
+$primary-color:rgb(119, 47, 206);
+$text-color-alpha:rgb(243, 243, 243);
+$text-color-beta:rgba(116, 14, 224, 0.738);
+$light-color:rgb(254, 250, 226);
+
+@mixin first-breakpoint{
+    @media screen and (max-width:800px){
+        @content;
+    }
+}
+
+@mixin second-breakpoint{
+    @media screen and (max-width:500px){
+        @content;
+    }
+}
+
+@mixin menu-bar-props{
+    position: absolute;
+    right:20px;
+    top: 20px;
+    padding: 3px;
+    width: 30px;
+    z-index: 100000000;
+    cursor: pointer;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.258);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin menu-icon-props{
+    background-color: rgba(246, 239, 185, 0.192);
+    border-radius: 3px;
+}

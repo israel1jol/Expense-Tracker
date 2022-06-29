@@ -1,0 +1,76 @@
+@import "variables";
+
+.container{
+    display: flex;
+    overflow-y:scroll;
+    height: 86vh;
+    justify-content: center;
+    margin: 10px 5px;
+    z-index: 1000000;
+    scroll-behavior: smooth;
+}
+
+.container::-webkit-scrollbar{
+    background-color: rgb(33, 5, 60);
+    width: 6px;
+    border-radius: 20px;
+}
+
+.container::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: rgb(209, 209, 209);
+    transition: 0.3s ease;
+
+    &:hover{
+        transform: scaleX(2);
+        background-color: rgb(240, 223, 255);
+    }
+}
+
+
+.containerScene{
+    margin: 0 30px;
+    padding: 30px;
+}
+
+
+.boundary{
+    display: flex;
+    justify-content: center;
+    transform: scale(0.8);
+    opacity: 0.8;
+    @include first-breakpoint{
+        transform: scale(1);
+    }
+
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include first-breakpoint{
+        flex-direction: column-reverse;
+    }
+
+    h1, h2{
+        font-weight: 100;
+        text-align: center;
+        margin: 20px 20px;
+        font-family: sans-serif;
+        color:$text-color-alpha;
+    }
+
+    h2{
+        margin: 2px 30px;
+    }
+
+    p{
+        color: darken($text-color-beta, 30%);
+        margin: 20px 30px;
+        text-align: center;
+    }
+
+
+}
