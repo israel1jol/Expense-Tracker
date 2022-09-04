@@ -76,13 +76,13 @@ export default function Login(){
                             {err ? <div className="w-75 mx-auto"><span className="p-2 alert alert-danger">{err}</span></div> : <></> }
                             <div className="my-3">
                                 <label htmlFor="email">Email</label>
-                                <input type="email" name="email" id="email" className="form-control my-2" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                                <input type="email" name="email" id="email" className="form-control my-2" value={email} onChange={(e) => setEmail(e.target.value)} required />
                             </div>
                             <div className="my-3">
                                 <label htmlFor="password">Password</label>
-                                <input type="password" name="password" id="password" className="form-control my-2" value={password} onChange={(e) => setPassword(e.target.value)} required/>
+                                <input type="password" name="password" id="password" className="form-control my-2" value={password} onChange={(e) => setPassword(e.target.value)} required />
                             </div>
-                            <div className="w-25 mx-auto"> <input type="submit" value="Login" className="btn btn-dark"/></div>
+                            <div className="w-25 mx-auto"> <input type="submit" value="Login" className="btn btn-dark" /></div>
                         </form>
                     </div>
                 </div>
