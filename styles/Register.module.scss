@@ -2,29 +2,10 @@
 
 .container{
     position: relative;
-    width: 80%;
-    margin:20px auto;
-}
-
-.formSpace{
-    width: 100%;
-}
-
-.formSpace::-webkit-scrollbar{
-    background-color: rgb(33, 5, 60);
-    width: 6px;
-    border-radius: 20px;
-}
-
-.formSpace::-webkit-scrollbar-thumb{
-    border-radius: 20px;
-    background-color: rgb(209, 209, 209);
-    transition: 0.3s ease;
-
-    &:hover{
-        transform: scaleX(2);
-        background-color: rgb(240, 223, 255);
-    }
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
 }
 
 .outterRim{
