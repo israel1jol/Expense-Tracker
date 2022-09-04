@@ -34,4 +34,8 @@
         color:$text-color-alpha;
         font-size: 20px;
     }
+
+    input[type="submit"]{
+        cursor:pointer;
+    }
 }
