@@ -2,29 +2,9 @@
 
 .container{
     display: flex;
-    overflow-y:scroll;
-    height: 86vh;
     justify-content: center;
     margin: 10px 5px;
-    z-index: 1000000;
     scroll-behavior: smooth;
-}
-
-.container::-webkit-scrollbar{
-    background-color: rgb(33, 5, 60);
-    width: 6px;
-    border-radius: 20px;
-}
-
-.container::-webkit-scrollbar-thumb{
-    border-radius: 20px;
-    background-color: rgb(209, 209, 209);
-    transition: 0.3s ease;
-
-    &:hover{
-        transform: scaleX(2);
-        background-color: rgb(240, 223, 255);
-    }
 }
 
 
