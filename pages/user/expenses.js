@@ -119,7 +119,7 @@ export default function Expenses(){
                             <input type="text" name="title" id="" value={title} onChange={(e) =>setTitle(e.target.value)} placeholder="Expense Name" required/>
                         </div>
                         <div className={style.inputField}>
-                            <input type="number" min="0" name="amount" id="" value={amount} onChange={(e) =>setAmount(e.target.value)} placeholder="Amount" required/>
+                            <input type="number" min="0" name="amount" id="" value={amount} onChange={(e) =>setAmount(e.target.value)} step={0.01} placeholder="Amount" required/>
                         </div>
                         <div className={style.inputField}>
                             <select name="type" className="form-select w-50" value={type} onChange={(e) => setType(e.target.value)} required>
