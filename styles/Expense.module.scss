@@ -217,24 +217,23 @@
     display: flex;
     justify-content: center;
     width: 100%;
-
-    button{
-        margin-top: 14px;
-    }
-
     input{
-        border: none;
+        border: 1px solid rgba(124, 57, 175, 0.7);
         padding: 7px;
         border-radius: 50%;
-        color: rgba(0, 0, 0, 0.793);
+        width:45px;
+        color: rgba(223, 213, 213, 0.793);
         font-size: 17px;
+        font-weight: 500;
         font-family: sans-serif;
         transition: 0.5s ease;
         margin: 10px 0;
+        background: rgba(128, 36, 190, 0.561);
+        box-shadow: 1px 1px 9px rgba(3, 101, 90, 0.566);
 
         &:hover, &:active{
             color: $text-color-alpha;
-            background-color: transparent;
+            background-color: rgba(39, 228, 137, 0.716);
             outline: 1px solid rgb(252, 252, 252);
         }
     }

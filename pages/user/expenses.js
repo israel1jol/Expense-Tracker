@@ -128,7 +128,7 @@ export default function Expenses(){
                             </select>
                         </div>
                         <div className={style.centeredField}>
-                            <input type="submit" value="Add" />
+                            <input type="submit" value="+" />
                         </div>
                     </form>
                 </div>
