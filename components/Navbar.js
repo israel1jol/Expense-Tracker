@@ -1,7 +1,7 @@
 import cedit from "../public/CEdit.png";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname} from "next/navigation";
+import { useRouter} from "next/router";
 import style from "../styles/Navbar.module.scss";
 import { useState, useContext, useEffect } from "react";
 import {AuthContext} from "./AuthContext";
@@ -13,7 +13,8 @@ const Navbar = () => {
     const getUserAccess = userRefForAcc();
     const { auth } = useContext(AuthContext);
     const logout = useLogout();
-    const pathname = usePathname();
+    const router = useRouter();
+    const pathname = router.pathname;
 
     
     useEffect(() => {
