@@ -1,6 +1,7 @@
 import cedit from "../public/CEdit.png";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname} from "next/navigation";
 import style from "../styles/Navbar.module.scss";
 import { useState, useContext, useEffect } from "react";
 import {AuthContext} from "./AuthContext";
@@ -12,6 +13,7 @@ const Navbar = () => {
     const getUserAccess = userRefForAcc();
     const { auth } = useContext(AuthContext);
     const logout = useLogout();
+    const pathname = usePathname();
 
     
     useEffect(() => {
@@ -38,11 +40,16 @@ const Navbar = () => {
 
         <div className={`d-flex justify-content-between align-items-center mx-3 ${style.container}`}>
             <div className="d-flex align-items-center">
-                <Image src={cedit} width={40} height={40}/>
-                <Link href="/">ard Tracker</Link>
+                <Image src={cedit} width={40} height={40}/> <span>ard Tracker</span>
             </div>
             <nav className={style.standardView}>
                 <ul className="nav align-items-center">
+                        <li className="nav-item mx-md-5 ">
+                        {
+                            pathname === '/' ? <Link href="/"><a className={style.customLink}>Home</a></Link> : <></>
+                        }
+                        
+                    </li>
                     <li className="nav-item mx-md-5 ">
                         {
                             !auth.isAuthenticated ? <Link href="/about"><a className={style.customLink}>About</a></Link> : <Link href="/user"><a className={style.customLink}>{auth.username}</a></Link>
@@ -67,7 +74,13 @@ const Navbar = () => {
                     <ul>
                         <li>
                             {
-                                !auth.isAuthenticated ? <Link href="/about"><a className={style.customLink}>About</a></Link> : <Link href="/user"><a className={style.customLink}>{auth.username}</a></Link>
+                                pathname === '/' ? <Link href="/"><a className={style.customLink}>Home</a></Link> : <></>
+                            }
+                            
+                        </li>
+                        <li>
+                            {
+                                !auth.isAuthenticated ? <Link href="/about"><a className={style.customLink}>About</a></Link> : <Link href="/user"><a className={style.customLink}>Profile</a></Link>
                             }
                             
                         </li>
