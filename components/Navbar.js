@@ -47,7 +47,7 @@ const Navbar = () => {
                 <ul className="nav align-items-center">
                         <li className="nav-item mx-md-5 ">
                         {
-                            pathname === '/' ? <Link href="/"><a className={style.customLink}>Home</a></Link> : <></>
+                            pathname !== '/' ? <Link href="/"><a className={style.customLink}>Home</a></Link> : <></>
                         }
                         
                     </li>
@@ -75,7 +75,7 @@ const Navbar = () => {
                     <ul>
                         <li>
                             {
-                                pathname === '/' ? <Link href="/"><a className={style.customLink}>Home</a></Link> : <></>
+                                pathname !== '/' ? <Link href="/"><a className={style.customLink}>Home</a></Link> : <></>
                             }
                             
                         </li>
