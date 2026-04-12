@@ -24,7 +24,7 @@ export default function User(){
         </Head>
         <div className={style.container}>
             <div >
-                <div className={style.profilePic}><Image src="https://i.postimg.cc/pVDrmVBM/alexander-ant-s-Kh6b9-Had-YU-unsplash.jpg" width={250} height={250} alt="Profile picture"/></div>
+                <div className={style.profilePic}><Image src="https://i.postimg.cc/dt5D82wH/nathan-da-silva-k-rKfqSm4L4-unsplash.jpg" width={250} height={250} alt="Profile picture"/></div>
                 <div className="text-center">
                     <h2>{auth.firstname} {auth.lastname}</h2>
                     <h4>{auth.username}</h4>
