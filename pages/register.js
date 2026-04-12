@@ -46,6 +46,11 @@ export default function Register(){
             window.scrollTo({top:window.innerHeight});
             return;
         }
+        if(email.indexOf("@") == -1 || email.indexOf(".com") != email.length - 4){
+            setErr({type:"profile", msg:"Valid email required", in:1})
+            window.scrollTo({top:window.innerHeight});
+            return;
+        }
         if(pass === "" || pass !== rePass){
             setErr({type:"pwd_err", msg:"Not a match", in:1})
             return;
